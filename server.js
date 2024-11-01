@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const orderRoutes = require('./routes/order');
+const orderRoutes = require('order');
 
 // Configuración de CORS para permitir cookies
 app.use(cors({
@@ -22,7 +22,7 @@ mongoose.connect('mongodb+srv://jose-new:WPXAbwRWYCEUZKUJ@cluster0.2jkla.mongodb
   .catch((error) => console.log("Error al conectar a MongoDB:", error));
 
 // Importa las rutas de productos
-const productoRoutes = require('./routes/productos');
+const productoRoutes = require('productos');
 app.use(productoRoutes); 
 
 // Configuración del servidor
