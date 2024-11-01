@@ -1,4 +1,3 @@
-module.exports = app;
 
 const mongoose = require('mongoose');
 const express = require('express');
