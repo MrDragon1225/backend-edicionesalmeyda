@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -9,6 +9,6 @@ async function connectToDB() {
     return client.db("edicionesalmeyda");
 }
 
-module.exports = connectToDB;
+export default connectToDB;
 
 

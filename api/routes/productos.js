@@ -1,6 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const Producto = require('../models/productos'); // Importa el modelo de producto
+import { Router } from 'express';
+const router = Router();
+import Producto from '../models/productos.js'; // Importa el modelo de producto
 
 // Ruta para obtener todos los productos
 router.get('/productos', async (req, res) => {
@@ -12,4 +12,4 @@ router.get('/productos', async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;

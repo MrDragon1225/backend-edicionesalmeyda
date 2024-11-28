@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import { Schema, model } from 'mongoose';
 
-const productoSchema = new mongoose.Schema({
+const productoSchema = new Schema({
     nombre: { type: String, required: true },
     descripcion: { type: String }, // Agrega el campo descripcion
     categoria: { type: String, required: true },
@@ -8,4 +8,4 @@ const productoSchema = new mongoose.Schema({
     imagen: { type: String }
 });
 
-module.exports = mongoose.model('Producto', productoSchema);
+export default model('Producto', productoSchema);
