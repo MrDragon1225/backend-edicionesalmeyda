@@ -1,8 +1,9 @@
 import { Router } from 'express';
+import express from 'express'
 const router = Router();
 import { createOrder, reciveWebhook } from '../controllers/payment.controller.js';
 
-router.post('/create-order', createOrder);
+router.post('/create-order', express.json(), createOrder);
 
 router.get('/success', (req,res) => res.send('success'));
 router.get('/failure', (req,res) => res.send('failure'));
